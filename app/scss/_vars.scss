@@ -1,0 +1,45 @@
+$bg: #ffffff;
+$accent: #fcd7b6;
+$accent-light: #fef7f0;
+$title: #1a1a1a;
+$item: #a3bbc8;
+$nav: #436372;
+$subtext: #8d8d8d;
+
+
+%dmsans-400 {
+  font-family: 'DMSans-Regular';
+  font-weight: 400;
+}
+
+%dmsans-500 {
+  font-family: 'DMSans-Medium';
+  font-weight: 500;
+}
+
+%dmsans-700 {
+  font-family: 'DMSans-Bold';
+  font-weight: 700;
+}
+
+%rubik-400 {
+  font-family: 'Rubik-Regular';
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: 'Rubik-Medium';
+  font-weight: 500;
+}
+
+%btn {
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  background-color: $item;
+  height: 38px;
+  width: 110px;
+  border: none;
+  @extend %dmsans-400;
+  cursor: pointer;
+}
