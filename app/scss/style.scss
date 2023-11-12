@@ -67,6 +67,7 @@
     padding: 0 35px;
     background-color: $accent;
     border-radius: 30px;
+    position: relative;
   }
 
   &__link-combined span {
@@ -74,7 +75,7 @@
     margin: 0 25px;
     font-size: 36px;
   }
-  
+
   .link-account {
     border-radius: 50%;
     padding: 15px;
@@ -84,7 +85,32 @@
   &__link+.user-nav__link {
     margin-left: 60px;
   }
+
+  &__link-combined .user-nav__num {
+    position: absolute;
+    font-size: 10px;
+    line-height: 27px;
+    @extend %dmsans-400;
+    border-radius: 50%;
+    background-color: $bg;
+    color: $nav;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    line-height: 18px;
+  }
+
+  &__link-combined .user-nav__num-favorites {
+    top: 9px;
+    left: 21px;
+  }
+
+  &__link-combined .user-nav__num-cart {
+    top: 9px;
+    right: 1px;
+  }
 }
+
 
 .footer {
   background-color: #fff;
@@ -161,6 +187,7 @@
 
   &__form-btn {
     @extend %btn;
+    width: 110px;
     margin-left: -3px;
   }
 }
@@ -206,4 +233,155 @@
   &__nav-list span {
     margin: 0 13px;
   }
+}
+
+.slider {
+  max-height: 820px;
+  height: 100vh;
+  background-color: $accent;
+  display: inline-block;
+  position: relative;
+}
+
+.slider-content {
+  display: grid;
+
+  &__title {
+    color: #243f4d;
+    font-size: 72px;
+    line-height: 70px;
+    @extend %rubik-500;
+  }
+
+  &__text {
+    color: $nav;
+    @extend %rubik-400;
+    line-height: 30px;
+    margin-bottom: 44px;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    max-height: 820px;
+    height: 100vh;
+    align-items: center;
+    background-image: url('../images/slider/circle.png');
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+  }
+
+  &__textual {
+    max-width: 411px;
+    max-height: 315px;
+    height: 100%;
+  }
+
+  &__link {
+    @extend %btn;
+    padding: 22px 26px;
+  }
+
+  &__link span {
+    font-size: 30px;
+    margin-left: 58px;
+    vertical-align: bottom;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  margin-top: -60px;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+li {
+
+  button {
+    padding: 8px 11px;
+    border-radius: 50%;
+    border: none;
+    background-color: $accent-light;
+    margin: 0 10px;
+    font-size: 10px;
+    color: $nav;
+    @extend %rubik-500;
+    cursor: pointer;
+  }
+
+  &.slick-active {
+    button {
+      background-color: #fff;
+
+    }
+  }
+}
+
+.service {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 170px;
+  height: 100vh;
+  background-color: $accent-light;
+}
+
+.service-item {
+  display: flex;
+
+  &__title {
+    font-size: 18px;
+    line-height: 40px;
+    @extend %dmsans-700;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %dmsans-400;
+  }
+
+  &__logo {
+    margin-top: 10px;
+    margin-right: 25px;
+    position: relative;
+  }
+
+  &__logo::after {
+    display: flex;
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: $item;
+    border-radius: 50%;
+    border: none;
+    opacity: 50%;
+    position: absolute;
+  }
+
+  &__logo-support::after {
+    right: -6px;
+    top: 32px;
+  }
+
+  &__logo-delivery::after {
+    right: -6px;
+    top: 17px;
+  }
+
+  &__logo-payment::after {
+    right: -6px;
+    top: 32px;
+  }
+}
+
+.service-item+.service-item {
+  border-left: 1px solid #e8e4df;
+  padding: 50px 0 50px 150px;
 }
