@@ -156,6 +156,10 @@
     max-width: 284px;
   }
 
+  &__link:hover {
+    color: $title;
+  }
+
   &__item {
     margin-bottom: 5px;
   }
@@ -384,4 +388,373 @@ li {
 .service-item+.service-item {
   border-left: 1px solid #e8e4df;
   padding: 50px 0 50px 150px;
+}
+
+.products {
+  padding-top: 75px;
+  padding-bottom: 105px;
+
+  &__title-item {
+    font-size: 36px;
+    @extend %dmsans-700;
+    text-align: center;
+    color: $title;
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+    margin-bottom: 80px;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $subtext;
+  }
+
+  &__nav-item+.products__nav-item {
+    margin-left: 30px;
+  }
+
+  &__nav-link:hover {
+    color: $title;
+  }
+}
+
+.products-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px 30px;
+  margin-bottom: 185px;
+}
+
+.products-item {
+
+  width: 270px;
+  height: 380px;
+
+  &:hover {
+    .products-item__popup-link {
+      transform: translateY(0);
+      transition: all .3s;
+    }
+  }
+
+  background-color: #fcfcfc;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &__popup {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__popup-link {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 13px;
+    transform: translateY(200px);
+  }
+
+  &__popup-link+.products-item__popup-link {
+    margin-left: 25px;
+  }
+
+  &__popup-link:hover {
+    background-color: $nav;
+
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-500;
+    color: $nav;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 40px;
+    @extend %dmsans-700;
+    color: $item;
+  }
+}
+
+.products-special {
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+
+  &__item {
+    background-color: #feefe2;
+    height: 390px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+  }
+
+  &__img {
+    position: absolute;
+    top: -95px;
+    z-index: 99;
+    left: 145px;
+  }
+
+  &__item+.products-special__item {
+    margin-left: 30px;
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 65px;
+  }
+
+  &__item-title {
+    font-size: 26px;
+    line-height: 32px;
+    color: #243f4d;
+    @extend %dmsans-700;
+    margin-bottom: 25px;
+  }
+
+  &__item-text {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %rubik-400;
+    color: #243f4d;
+    margin-bottom: 35px;
+  }
+
+  &__item-link {
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    color: $nav;
+    border: 1px solid #b3b7b5;
+    padding: 22px 18px;
+    width: fit-content;
+    border-radius: 7px;
+
+    span {
+      margin-left: 40px;
+    }
+  }
+}
+
+.design {
+
+  &__title-item {
+    font-size: 36px;
+    color: $title;
+    @extend %dmsans-700;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  ul.design__nav-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__nav-item+.design__nav-item {
+    margin-left: 30px;
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $subtext;
+  }
+
+  &__nav-link:hover {
+    color: $title;
+    transition: all .3s;
+  }
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px 30px;
+  margin-bottom: 120px;
+
+
+  &__item {
+    width: 370px;
+    height: 245px;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &:nth-child(3) {
+      background-position-x: 200px;
+      background-color: #f8f8f8;
+    }
+
+    &:nth-child(5) {
+      background-position-x: 200px;
+      background-color: #f8f8f8;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    color: $title;
+    @extend %dmsans-700;
+  }
+
+  &__title {
+    margin-top: 18px;
+    margin-left: 26px;
+
+    span {
+      @extend %dmsans-700;  
+      display: block;
+      font-size: 16px;
+      color: $item;
+      margin-top: 20px;
+    }
+  }
+}
+
+.design-video {
+  background-image: url('../images/furniture/design/video-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  margin-bottom: 120px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__btn {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+.articles-top {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 52px;
+  align-items: baseline;
+
+  &__title {
+    color: $title;
+    font-size: 36px;
+    @extend %dmsans-700;
+  }
+
+  &__link {
+    color: $title;
+    font-size: 16px;
+    @extend %dmsans-700;
+
+    span {
+      margin-left: 18px;
+    }
+  }
+}
+
+.articles-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.articles-item {
+  width: 370px;
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+
+  &__img {
+    margin-bottom: 40px;
+  }
+
+  &__decoration {
+    width: fit-content;
+    background-color: $item;
+    padding: 10px 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 228px;
+    left: 28px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    @extend %dmsans-700;
+  }
+
+  &__text {
+    margin-left: 28px;
+    margin-right: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 18px;
+    max-height: 75px;
+    height: 100%;
+    margin-bottom: 12px;
+
+    a {
+      @extend %dmsans-500;
+      color: $title;
+      font-size: 18px;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 30px;
+    @extend %rubik-400;
+    margin-left: 28px;
+    margin-right: 50px;
+    margin-bottom: 12px;
+  }
+
+  &__author {
+    margin-left: 30px;
+  }
+}
+
+.articles-item+.articles-item {
+  margin-left: 30px;
+}
+
+.articles {
+  &__brands {
+    background-color: #fef7f0;
+    height: 435px;
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 260px;
+    margin-top: -170px;
+  }
 }
