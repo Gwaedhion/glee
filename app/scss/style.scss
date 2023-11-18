@@ -626,7 +626,7 @@ li {
     margin-left: 26px;
 
     span {
-      @extend %dmsans-700;  
+      @extend %dmsans-700;
       display: block;
       font-size: 16px;
       color: $item;
@@ -756,5 +756,139 @@ li {
     align-items: center;
     padding-top: 260px;
     margin-top: -170px;
+  }
+}
+
+.login-top {
+  background-color: #edf1f4;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 24px;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      margin-top: 3px;
+      color: $nav;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: $nav;
+    @extend %rubik-400;
+  }
+}
+
+.login-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__submit-btn {
+    width: 470px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #243f49;
+    background-color: #fff;
+    height: 60px;
+    border: 2px solid $item;
+    @extend %rubik-500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: $nav;
+    margin-bottom: 18px;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #f6f6f6;
+  margin-bottom: 35px;
+
+
+  &__input {
+    height: 60px;
+    width: 470px;
+    margin-bottom: 25px;
+    border: 1px solid #f6f6f6;
+    padding: 0 7px;
+    font-size: 16px;
+    @extend %rubik-400;
+  }
+
+  &__text {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: $nav;
+    @extend %rubik-400;
+  }
+
+  &__lower {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    background-color: $item;
+    height: 60px;
+    border: none;
+    @extend %rubik-500;
+    cursor: pointer;
+    width: 470px;
+    margin-bottom: 35px;
+  }
+
+  &__lower {
+    padding-bottom: 35px;
+  }
+
+  &__lower-item {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+      @extend %rubik-400;
+      color: $nav;
+    }
+  }
+
+  &__pass-recovery{
+    text-decoration: none;
+    font-size: 14px;
+    @extend %rubik-400;
+    color: $nav;
+    display: flex;
+    align-items: center;
   }
 }
