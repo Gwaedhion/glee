@@ -5,6 +5,7 @@ $title: #1a1a1a;
 $item: #a3bbc8;
 $nav: #436372;
 $subtext: #8d8d8d;
+$paragraph: #243f4d;
 
 
 %dmsans-400 {
@@ -30,6 +31,11 @@ $subtext: #8d8d8d;
 %rubik-500 {
   font-family: 'Rubik-Medium';
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik-Bold';
+    font-weight: 700;
 }
 
 %btn {

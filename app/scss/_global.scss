@@ -21,3 +21,45 @@ a {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.page-title {
+  background-color: #edf1f4;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 24px;
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: $subtext;
+      @extend %rubik-400;
+    }
+
+    span {
+      margin-top: 2px;
+      color: $nav;
+      padding: 0 5px;
+    }
+  }
+}
+
+.title {
+  color: $paragraph;
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 32px;
+}
