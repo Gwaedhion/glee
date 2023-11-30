@@ -2339,6 +2339,143 @@ li {
 
 }
 
+.contact-page {
+
+  &__contacts {
+    margin-bottom: 120px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: $item;
+    @extend %rubik-500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    color: $paragraph;
+    font-size: 35px;
+    line-height: 57px;
+    text-align: center;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 370px;
+    height: 382px;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item:hover {
+    border: 1px solid $item;
+
+    .contact-page__icon {
+
+      background-color: $item;
+
+      path {
+        fill: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  &__icon {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+
+  &__item-title {
+    font-size: 20px;
+    line-height: 26px;
+    @extend %dmsans-700;
+    margin-bottom: 25px;
+    color: #222222;
+  }
+
+  &__item-text,
+  &__item-link {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+  }
+
+  &__item-text--link {
+    margin-right: 5px;
+  }
+
+  &__inner-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    margin-right: 50px;
+    margin-bottom: 140px;
+  }
+
+  &__input-box {
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    width: 300px;
+    height: 50px;
+    padding: 17px 20px;
+  }
+
+  &__input:first-child {
+    margin-right: 15px;
+  }
+
+  &__textarea {
+    width: 620px;
+    height: 175px;
+    resize: none;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+  }
+
+  &__input,
+  &__textarea {
+    background-color: #fafafa;
+    border: none;
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+    @extend %rubik-400;
+  }
+
+  &__btn {
+    @extend %btn;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}
+
 
 
 
